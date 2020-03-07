@@ -9,24 +9,24 @@ represents the index in the clients vector. In the array the attributes of
 every connection between the stations, respectively the clients of a station.
 The data is read, marking in the adjacency matrix each edge between the two
 vertices. 
-For the "connection" it is checked in the adjacency matrix of the corresponding
+* For the "connection" it is checked in the adjacency matrix of the corresponding
 client graph if there is a connection between the two vertices.
-For the "link" all connections with the respective station are checked in the
+* For the "link" all connections with the respective station are checked in the
 adjacency matrix of the station graph.
-For "route_block", the element in the matrix corresponding to the two stations
+* For "route_block", the element in the matrix corresponding to the two stations
 is marked with infinity.
-For "street_block", the element in the matrix corresponding to the two clients
+* For "street_block", the element in the matrix corresponding to the two clients
 is marked with infinity. 
-For "delete_route" the element in the matrix corresponding to the two stations
+* For "delete_route" the element in the matrix corresponding to the two stations
 is marked with zero. 
-For "delete_street" the element in the matrix corresponding to the two clients
+* For "delete_street" the element in the matrix corresponding to the two clients
 is marked with zero.
-For "add_route" and "add_street" the elements with the respective index are
+* For "add_route" and "add_street" the elements with the respective index are
 marked in the adjancency matrix.
-For "station_order" it is checked whether the amount paid at each station is
+* For "station_order" it is checked whether the amount paid at each station is
 greater than or equal to the value sent.
-For "station_path" and "client_path" Dijkstra's algorithm is used.
-For "station_time" always start with the client who has the minimum time to the
+* For "station_path" and "client_path" Dijkstra's algorithm is used.
+* For "station_time" always start with the client who has the minimum time to the
 subway station and succesively adds the minimum time from the clients with whom
 he has a link and they have not been visited.
 
