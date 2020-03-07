@@ -147,7 +147,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 	{
 		fscanf(fin, "%s", buff);
 
-		if (!strcmp(buff, "conexiune"))
+		if (!strcmp(buff, "connection"))
 		{
 			char *client1 = malloc(30);
 			char *client2 = malloc(30);
@@ -162,7 +162,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(client2);
 		}
 
-		if (!strcmp(buff, "legatura"))
+		if (!strcmp(buff, "link"))
 		{
 			char *station = malloc(30);
 
@@ -173,7 +173,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(station);
 		}
 
-		if (!strcmp(buff, "blocaj_tunel"))
+		if (!strcmp(buff, "route_block"))
 		{
 			char *station1 = malloc(30);
 			char *station2 = malloc(30);
@@ -186,7 +186,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(station2);
 		}
 
-		if (!strcmp(buff, "blocaj_strada"))
+		if (!strcmp(buff, "street_block"))
 		{
 			char *client1 = malloc(30);
 			char *client2 = malloc(30);
@@ -199,7 +199,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(client2);
 		}
 
-		if (!strcmp(buff, "adauga_ruta"))
+		if (!strcmp(buff, "add_route"))
 		{
 			char *station1 = malloc(30);
 			char *station2 = malloc(30);
@@ -213,7 +213,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(station2);
 		}
 
-		if (!strcmp(buff, "adauga_strada"))
+		if (!strcmp(buff, "add_street"))
 		{
 			char *client1 = malloc(30);
 			char *client2 = malloc(30);
@@ -227,7 +227,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(client2);
 		}
 
-		if (!strcmp(buff, "sterge_strada"))
+		if (!strcmp(buff, "delete_street"))
 		{
 			char *client1 = malloc(30);
 			char *client2 = malloc(30);
@@ -240,7 +240,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(client2);
 		}
 		
-		if (!strcmp(buff, "sterge_ruta"))
+		if (!strcmp(buff, "delete_route"))
 		{
 			char *station1 = malloc(30);
 			char *station2 = malloc(30);
@@ -253,7 +253,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(station2);
 		}
 
-		if (!strcmp(buff, "comanda_statie"))
+		if (!strcmp(buff, "station_order"))
 		{
 			int value;
 
@@ -262,7 +262,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			stationOrder(g, value, fout);
 		}
 
-		if (!strcmp(buff, "drum_metrou"))
+		if (!strcmp(buff, "station_path"))
 		{
 			char *station1 = malloc(30);
 			char *station2 = malloc(30);
@@ -275,7 +275,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(station2);
 		}
 
-		if (!strcmp(buff, "drum_strada"))
+		if (!strcmp(buff, "client_path"))
 		{
 			
 			char *client1 = malloc(30);
@@ -289,7 +289,7 @@ void readTasks(FILE *fin, FILE *fout, stationGraph *g)
 			free(client2);
 		}
 
-		if (!strcmp(buff, "timp_statie"))
+		if (!strcmp(buff, "station_time"))
 		{
 			char *station = malloc(30);
 
